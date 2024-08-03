@@ -1,3 +1,0 @@
-INDEX VERSION 1.131
-C:\PersonalSite\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1596054002.index
-\PortfollioSite\src
