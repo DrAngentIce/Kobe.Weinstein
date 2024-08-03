@@ -1,0 +1,11 @@
+127.0.0.1 - - [17/Jan/2021:16:40:18 -0800] "GET / HTTP/1.1" 404 709
+127.0.0.1 - - [17/Jan/2021:16:40:56 -0800] "GET / HTTP/1.1" 404 709
+0:0:0:0:0:0:0:1 - - [17/Jan/2021:16:41:07 -0800] "GET /PortfollioSite/Index.html HTTP/1.1" 404 738
+0:0:0:0:0:0:0:1 - - [17/Jan/2021:16:41:07 -0800] "GET /favicon.ico HTTP/1.1" 404 720
+0:0:0:0:0:0:0:1 - - [17/Jan/2021:16:41:14 -0800] "GET /PortfollioSite/Index.jsp HTTP/1.1" 200 9598
+0:0:0:0:0:0:0:1 - - [17/Jan/2021:16:41:14 -0800] "GET /PortfollioSite/Portrait.gif HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/Jan/2021:17:32:40 -0800] "GET /PortfollioSite/Index.jsp HTTP/1.1" 200 14684
+0:0:0:0:0:0:0:1 - - [17/Jan/2021:18:46:28 -0800] "GET /PortfollioSite/Index.jsp HTTP/1.1" 200 14582
+0:0:0:0:0:0:0:1 - - [17/Jan/2021:18:46:52 -0800] "GET /PortfollioSite/Index.jsp HTTP/1.1" 200 14586
+0:0:0:0:0:0:0:1 - - [17/Jan/2021:18:50:15 -0800] "GET /PortfollioSite/Index.jsp HTTP/1.1" 200 14583
+0:0:0:0:0:0:0:1 - - [17/Jan/2021:18:51:28 -0800] "GET /PortfollioSite/Index.jsp HTTP/1.1" 200 14583

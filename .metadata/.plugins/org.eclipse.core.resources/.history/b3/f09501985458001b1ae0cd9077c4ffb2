@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Kobe Weinstein</title>
+
+<style>
+
+ * {box-sizing: border-box}
+ 
+ :root {
+  --primary: #05F140;
+  --primaryDim: #04C835;
+  --textP: #000000;
+  --Secondary: #034D63;
+  --SecondaryLight: #046B8B;
+  --textS: #dadfe1;
+  --bg: #7C9299;
+  --textBg: #000000;
+  }
+ 
+ body {
+  font-size: 150%;
+  font-family:"Courier New", monospace;
+  background-color: var(--bg);
+  
+}
+ 
+ 
+ .tab {
+  float: left;
+  border: 2px solid var(--Secondary);
+  border-top: none;
+  border-bottom: none;
+  background-color: var(--Secondary);
+  width: 15vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+	}
+	
+ .tab button {
+  display: block;
+  background-color: inherit;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family:"Courier New", monospace;	
+  color: var(--textS);
+}
+
+.tab button:hover {
+  background-color: var(--primary);
+  color: var(--textP);  
+  border-top: 4px solid var(--SecondaryLight);
+  border-bottom: 4px solid var(--SecondaryLight);  
+}
+
+.tab button.active {
+  background-color: var(--primaryDim);
+  color: var(--textP);
+  border-top: 4px solid var(--Secondary);
+  border-bottom: 4px solid var(--Secondary);
+}
+
+.projectContent {
+  float: left;
+  padding: 0px 8px;
+  border: 1px solid var(--Secondary);
+  width: 70vw;
+  border-left: none;
+  height: 100vh;
+  display: none;
+  font-family:"Courier New", monospace;	
+}
+
+.tabContent {
+  float: left;
+  padding: 0px 12px;
+  border: none;
+  width: 85vw;
+  border-left: none;
+  height: 100vh;
+  display: none;
+  font-family:"Courier New", monospace;	
+  background-color: var(--bg);
+  
+}
+
+.columnName
+{
+	width: 80%;
+	display:flex; 
+	align-content:center;
+}
+
+.columnContact
+{
+	width: 20%;
+	height: 30%;
+	padding: 6px;
+	text-align:Right;
+	vertical-align: text-top;
+}
+
+.SkillsCourses
+{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	width: 100%;
+	padding: 24px;
+}
+
+.column
+{
+}
+
+li + li {
+  margin-top: 15px;
+}
+
+hr
+{
+ Border: 1px solid var(--Secondary);
+}
+
+a:link, a:visited 
+{
+	color:black;
+}
+
+
+</style>
+
+<script src="https://kit.fontawesome.com/3095d7b5c5.js" crossorigin="anonymous"></script>
+<script>
+function openTab(evt, tabName)
+{
+
+	var i, tabContent, tabs;
+
+
+	tabcontent = document.getElementsByClassName("tabContent");
+	for(i=0; i < tabcontent.length; i++)
+	{
+		tabcontent[i].style.display = "none";
+	}
+	
+	tabs = document.getElementsByClassName("tablinks");
+	for(i=0; i < tabs.length; i++)
+	{
+		tabs[i].className = tabs[i].className.replace(" active", "");
+	}
+
+	document.getElementById(tabName).style.display = "block";
+	
+	if(tabName == 'projects')
+	{
+		document.getElementById(tabName).style.padding = "0px 0px";
+	}
+	
+	evt.currentTarget.className += " active";
+
+}
+
+function openProject(evt, projectName)
+{
+
+	var i, tabContent, tabs;
+
+
+	tabcontent = document.getElementsByClassName("projectContent");
+	for(i=0; i < tabcontent.length; i++)
+	{
+		tabcontent[i].style.display = "none";
+	}
+	
+	tabs = document.getElementsByClassName("projectlinks");
+	for(i=0; i < tabs.length; i++)
+	{
+		tabs[i].className = tabs[i].className.replace(" active", "");
+	}
+
+	document.getElementById(projectName).style.display = "block";
+	
+	evt.currentTarget.className += " active";
+
+}
+
+
+</script>
+
+
+</head>
+
+
+<body style="width: 100vw; height: 100vh; margin: 0; padding: 0;">
+
+	<div class="tab">
+	<button class="tablinks" onclick="openTab(event, 'about')" id="default">About</button>
+	<button class="tablinks" onclick="openTab(event, 'projects')">Projects</button>
+	</div>
+	
+	
+	<div id = "projects" class="tabContent">
+		<div class="tab" style="border-left: none;">
+			<button class="projectlinks" onclick="openProject(event,'BookStacks')">The BookStacks</button>
+			<button class="projectlinks" onclick="openProject(event,'RunnersEdge')">Runner's Edge</button>
+			<button class="projectlinks" onclick="openProject(event,'Pinball')">Pinball</button>
+		</div>
+		
+		
+		
+		
+		<div id="BookStacks" class="projectContent">
+		
+		<div style="width:100%; display: flex; justify-content: space-between;">
+		
+		<div>
+		<p style="font-size: 0.75em;"><span style = "font-size: 2.2em">The BookStacks</span> <br>
+		Developed by: Kobe Weinstein and Adrian Lopez</p>
+		</div>
+		
+		<div style ="align-self:center; padding: 0px 4vw;">
+		<i>Unity</i>
+		</div>
+		
+		</div>
+		
+		<div style="text-align:center;">
+			<iframe width="50%" height="300vh" style="border:none;"
+			src="https://www.youtube.com/embed/muQl5Ingy2Q?autoplay=1&mute=1&loop=1">
+			</iframe>
+		</div>
+		
+		<div style="width: 75%; text-align:center; margin: auto;">
+			<hr>
+			<p style="font-size:0.75em;">Desc: A fast paced isometric adventure that takes the player deep below a library to destroy an evil lich bent on opening a portal to a realm of horrors. The Bookstacks central challenge, revolves around the managing of a very limited pool of reusable ammunition. </p>
+		</div>
+		
+		<div style="float:right; width:40%;">
+		<p>Composition of work:</p>
+			<div style="width:100%; display:flex; flex-direction: column;">
+				<div><div style="display:inline-block; width:10vw;">Art</div> <div style="border:1px solid black; width:60%; height:3vh; display:inline-block; vertical-align: middle;"><div style="background-color: var(--primaryDim); height:100%; width:35%;"></div></div> </div>
+				<div><div style="display:inline-block; width:10vw;">Level Design</div> <div style="border:1px solid black; width:60%; height:3vh; display:inline-block; vertical-align: middle;"><div style="background-color: var(--primaryDim); height:100%; width:45%;"></div></div> </div>
+				<div><div style="display:inline-block; width:10vw;">Gameplay</div> <div style="border:1px solid black; width:60%; height:3vh; display:inline-block; vertical-align: middle;"><div style="background-color: var(--primaryDim); height:100%; width:90%;"></div></div> </div>
+				<div><div style="display:inline-block; width:10vw;">Engine</div> <div style="border:1px solid black; width:60%; height:3vh; display:inline-block; vertical-align: middle;"><div style="background-color: var(--primaryDim); height:100%; width:20%;"></div></div> </div>
+				<div><div style="display:inline-block; width:10vw;">AI</div> <div style="border:1px solid black; width:60%; height:3vh; display:inline-block; vertical-align: middle;"><div style="background-color: var(--primaryDim); height:100%; width:90%;"></div></div> </div>
+			</div>
+		</div>
+		
+			
+		</div>
+		
+		
+		<div id="RunnersEdge" class="projectContent">
+		Runner's Edge
+		</div>
+		<div id="Pinball" class="projectContent">
+		 Pinball
+		</div>
+		
+	</div>
+	
+	<div id="about" class="tabContent">
+	
+	<div style="width:100%; display:flex; flex-flow:row wrap; justify-content:space-between;">
+		
+		<div class="columnName">
+			<img src="Portrait.gif" width="200px" height="200px">
+			<div>
+			<h1 style="color: var(--primary); font-size:2.5em;">Kobe Weinstein</h1>
+			<h6>Graduating in Spring 2022, BS Computer Science:Games from The University of Southern California</h6>
+			</div>
+		</div>
+		
+		<div class="columnContact">
+		<p style="font-size: 2.5em;">
+			<a href="http://www.linkedin.com/in/kobe-weinstein" style="color:blue;"><i class="fab fa-linkedin"></i></a> 
+			<a href="http://www.Github.com/DrAgentIce" style="color:black;"><i class="fab fa-github-square"></i></a>
+		</p>
+		</div>
+	
+	</div>
+	
+	<p style="padding: 0px 24px; text-indent:2em;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cuius similitudine perspecta in formarum specie ac dignitate transitum est ad honestatem dictorum atque factorum. Aut unde est hoc contritum vetustate proverbium: quicum in tenebris? Non autem hoc: igitur ne illud quidem. Illum mallem levares, quo optimum atque humanissimum virum, Cn. Duo Reges: constructio interrete. Nullus est igitur cuiusquam dies natalis. Hosne igitur laudas et hanc eorum, inquam, sententiam sequi nos censes oportere? Sed plane dicit quod intellegit. Quantam rem agas, ut Circeis qui habitet totum hunc mundum suum municipium esse existimet? Voluptatem cum summum bonum diceret, primum in eo ipso parum vidit, deinde hoc quoque alienum; </p>
+	
+	<div class="SkillsCourses">
+	
+	<div class="column">
+	<div style="text-align: center;">Skills</div>
+	<hr>
+	<ul>
+	<li>C++, C#, Java</li>
+	<li>Unity, SDL</li>
+	<li>Game Design/Ideation/Prototyping</li>
+	<li>Database management, Filemaker</li>
+	<li>Artificial Neural Network experience</li>
+	</ul>
+	</div>
+	
+	<div class="column">
+	<div style="text-align: center;">Education</div>
+	<hr>
+	<ul>
+		<li>Video Game Programming <a href="https://web-app.usc.edu/soc/syllabus/20201/31902.pdf">ITP380</a></li>
+		<li>Data structures <a href="https://web-app.usc.edu/ws/soc_archive/soc/term-20201/course/csci-201/index.html">CSCI201</a></li>
+		<li>Algorithms <a href="https://classes.usc.edu/term-20203/course/csci-270/">CSCI270</a></li>
+		<li>Game Design <a href="https://classes.usc.edu/term-20201/course/ctin-484/">CTIN484/489</a></li>
+	</ul>
+	</div>
+	
+	</div>
+	
+	
+	</div>
+
+<script>
+document.getElementById("default").click();
+</script>
+</body>
+
+</html>
